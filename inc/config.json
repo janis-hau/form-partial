@@ -1,0 +1,112 @@
+{
+    "form": {
+        "accept-charset" : "UTF-8",
+        "action"         : "#",
+        "autocomplete"   : "on",
+        "enctype"        : "multipart/form-data",
+        "method"         : "POST",
+        "name"           : "form_partial",
+        "novalidate"     : 1,
+        "target"         : "_self"
+    },
+    "fields" : {
+        "firstname" : {
+            "label"        : {
+                "text"  : "Firstname",
+                "class" : "label2border__label"
+            },
+            "autocomplete" : "given-name",
+            "type"         : "text",
+            "placeholder"  : "Firstname",
+            "minlength"    : 2,
+            "maxlength"    : 15,
+            "size"         : 15,
+            "required"     : 1,
+            "disabled"     : 0,
+            "container"    : {
+                "element"  : "div",
+                "class"    : "form__field  w-6/12",
+                "id"       : "firstname__container"
+            }
+        },
+        "lastname" : {
+            "label"       : {
+                "text"  : "Lastname",
+                "class" : "label2border__label"
+            },
+            "type"         : "text",
+            "autocomplete" : "family-name",
+            "placeholder"  : "Lastname",
+            "minlength"    : 2,
+            "maxlength"    : 15,
+            "size"         : 15,
+            "required"     : 1,
+            "disabled"     : 0,
+            "container"    : {
+                "element"  : "div",
+                "class"    : "form__field  w-6/12",
+                "id"       : "lastname__container"
+            }
+        },
+        "Email" : {
+            "label"       : {
+                "text"  : "Email",
+                "class" : "label2border__label"
+            },
+            "type"        : "email",
+            "placeholder" : "Email",
+            "minlength"   : 2,
+            "maxlength"   : 15,
+            "size"        : 15,
+            "required"    : 1,
+            "disabled"    : 0,
+            "container"   : {
+                "element" : "div",
+                "class"   : "form__field  w-6/12",
+                "id"      : "email__container"
+            }
+        },
+        "GDPR" : {
+            "label"        : {
+                "text"  : "Please confirm that your've read and accept our privacy policy",
+                "class" : ""
+            },
+            "type"         : "checkbox",
+            "required"     : 1,
+            "disabled"     : 0,
+            "autocomplete" : "on", 
+            "list"         : "", 
+            "maxlength"    : "", 
+            "minlength"    : "", 
+            "multiple"     : "", 
+            "pattern"      : "", 
+            "placeholder"  : "", 
+            "readonly"     : "",
+            "size"         : ""
+        },
+        "birthday"         : {
+            "label" : {
+                "text" : "When is your birthday?"
+            },
+            "type"         : "date",
+            "autocomplete" : "bday",
+            "name"         : "bday",
+            "required"     : 1
+        },
+        "avatar" : {
+            "label" : {
+                "text" : "Choose your avatar"
+            },
+            "accept"   : "image/*",
+            "type"     : "file", 
+            "required" : 1,
+            "name"     : "avatar",
+            "id"       : "avatar"
+        },
+        "submit" : {
+            "text"  : "Send request",
+            "type"  : "submit",
+            "class" : "btn btn--primary"
+        }
+    }
+}
