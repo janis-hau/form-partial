@@ -1,0 +1,6 @@
+[submodule "assets/js/libs/jQuery.validation"]
+	path = assets/js/libs/jQuery.validation
+	url = git@github.com:jquery-validation/jquery-validation.git
+[submodule "assets/js/libs/jQuery"]
+	path = assets/js/libs/jQuery
+	url = git@github.com:jquery/jquery.git

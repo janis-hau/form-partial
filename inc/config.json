@@ -3,6 +3,7 @@
         "accept-charset" : "UTF-8",
         "action"         : "#",
         "autocomplete"   : "on",
+        "class"          : "form  [ grid-container ]",
         "enctype"        : "multipart/form-data",
         "method"         : "POST",
         "name"           : "form_partial",
@@ -25,7 +26,7 @@
             "disabled"     : 0,
             "container"    : {
                 "element"  : "div",
-                "class"    : "form__field  w-6/12",
+                "class"    : "form__field  [ grid-item  w-6/12 ]",
                 "id"       : "firstname__container"
             }
         },
@@ -44,7 +45,7 @@
             "disabled"     : 0,
             "container"    : {
                 "element"  : "div",
-                "class"    : "form__field  w-6/12",
+                "class"    : "form__field  [ grid-item  w-6/12 ]",
                 "id"       : "lastname__container"
             }
         },
@@ -62,7 +63,7 @@
             "disabled"    : 0,
             "container"   : {
                 "element" : "div",
-                "class"   : "form__field  w-6/12",
+                "class"   : "form__field  [ grid-item  w-6/12 ]",
                 "id"      : "email__container"
             }
         },
@@ -82,7 +83,10 @@
             "pattern"      : "", 
             "placeholder"  : "", 
             "readonly"     : "",
-            "size"         : ""
+            "size"         : "",
+            "container"    : {
+                "class"    : "form__field  [ grid-item  w-6/12 ]"
+            }
         },
         "birthday"         : {
             "label" : {
@@ -91,7 +95,10 @@
             "type"         : "date",
             "autocomplete" : "bday",
             "name"         : "bday",
-            "required"     : 1
+            "required"     : 1,
+            "container"    : {
+                "class"    : "form__field  [ grid-item  w-6/12 ]"
+            }
         },
         "avatar" : {
             "label" : {
@@ -101,12 +108,19 @@
             "type"     : "file", 
             "required" : 1,
             "name"     : "avatar",
-            "id"       : "avatar"
+            "id"       : "avatar",
+            "container" : {
+                "class" : "form__field  [ grid-item  w-6/12 ]"
+            }
         },
         "submit" : {
-            "text"  : "Send request",
-            "type"  : "submit",
-            "class" : "btn btn--primary"
+            "text"     : "Send request",
+            "type"     : "submit",
+            "class"    : "btn btn--primary",
+            "disabled" : 1,
+            "container" : {
+                "class" : "form__field  form__trigger-container  [ grid-item  w-12/12 ]"
+            }
         }
     }
 }

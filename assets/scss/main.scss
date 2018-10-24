@@ -1,0 +1,70 @@
+$base-font-size : 16px;
+
+
+
+// GRID
+.grid {
+    &-container {
+        text-align: justify;
+        font-size: 0;
+        text-justify: distribute-all-lines;
+
+
+        &:after {
+            content: ' ';
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+
+    &-item {
+        display: inline-block;
+        text-align: left;
+        font-size: $base-font-size;
+    }
+}
+
+
+
+// BOX-SIZING HACK
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+
+// WIDTHS
+@for $i from 1 to 12+1 {
+    .w-#{$i}\/12 {
+        width : percentage( $i / 12 );
+    }
+}
+
+
+
+
+// FORM-FIELD
+$form-field-spacing-bottom : 10px;
+$form-field-spacing-horizontal : 10px;
+
+.form__field {
+    display : inline-block;
+    margin  : 0 0 $form-field-spacing-bottom;
+    padding : 20px;
+
+    label {
+        display: block;
+    }
+
+    
+    &.w-6\/12 {
+        width: calc( #{percentage( 6 / 12 )} - #{$form-field-spacing-horizontal / 2} );
+    }
+}

@@ -92,22 +92,34 @@ function buildForm( $arrays ) {
                 $form_template .= '<button';
 
                 foreach ($field as $attribute => $value) {
-                    if ( $attribute !== 'text'
+                    if ( $attribute !== 'text' &&
+                         !is_numeric( $value ) &&
+                         $attribute !== 'container'
                     ) {
                         $form_template .= ' ' . $attribute . '="' . $value . '"';
-                    }
+                    } elseif ( is_numeric($value) ) {
+                        $form_template .= ' ' . $attribute;
+                    } 
                 }
                 $form_template .= '>';
                 $form_template .= $field['text'];
                 $form_template .= '</button>';
 
+                $form_template .= '<span class="';
+                $form_template .= 'js-form__trigger-by-disabled-btn  form__trigger-by-disabled-btn';
+                $form_template .= '">&nbsp;</span>';
+
             endif;
 
             if ( array_key_exists( 'container', $field ) ) {
-                $form_template .= '</'  . $field['container']['element'] . '>'; // End of form__field
+                if ( array_key_exists( 'element', $field ) ) 
+                    $form_template .= '</'  . $field['container']['element'] . '>'; // End of form__field
+                else
+                    $form_template .= '</div>';
             } else {
                 $form_template .= '</div>';
             }
+            $form_template .= '&nbsp;';
         endforeach;
 
         // FIELDS
